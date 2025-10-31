@@ -1,0 +1,27 @@
+A Arquitetura Hexagonal, também conhecida como Arquitetura de Portas e Adaptadores, foi criada por Alistair Cockburn com o objetivo de tornar sistemas mais flexíveis, testáveis e independentes de frameworks externos. O conceito central é separar a lógica de negócio (núcleo do sistema) das interfaces externas, como bancos de dados, APIs ou interfaces de usuário, garantindo que o núcleo permaneça isolado de detalhes de infraestrutura.
+
+O sistema é organizado em torno de um núcleo central que contém as regras de negócio, e adaptadores que conectam esse núcleo ao mundo externo por meio de portas. As portas definem interfaces para acesso ao núcleo ou aos recursos externos, enquanto os adaptadores implementam essas interfaces, permitindo integração com bancos de dados, interfaces gráficas, serviços externos ou testes automatizados.
+
+Os principais benefícios da Arquitetura Hexagonal incluem:
+
+Isolamento do domínio, facilitando manutenção e evolução do sistema sem impactar a lógica central.
+
+Testabilidade, permitindo testar o núcleo isoladamente usando mocks ou stubs.
+
+Flexibilidade e desacoplamento, simplificando a substituição de tecnologias externas.
+
+Clareza na separação de responsabilidades, melhorando organização e legibilidade do código.
+
+Embora compartilhe princípios com a Clean Architecture, a Arquitetura Hexagonal foca na relação entre o núcleo e o mundo externo, usando portas e adaptadores. Já a Clean Architecture organiza o sistema em camadas concêntricas para isolar regras de negócio de detalhes de implementação, enfatizando independência de frameworks e casos de uso.
+
+Na prática, a Arquitetura Hexagonal pode ser aplicada em diversos tipos de projetos, desde aplicações simples até sistemas complexos. Antes de adotá-la, é importante considerar:
+
+Complexidade do projeto: sistemas simples podem não se beneficiar da sobrecarga do padrão.
+
+Experiência da equipe: compreensão de portas, adaptadores e isolamento de domínio é essencial.
+
+Integrações externas: sistemas com múltiplas dependências externas se beneficiam mais do desacoplamento.
+
+Necessidade de testabilidade e manutenção futura: projetos que exigem testes robustos e facilidade de evolução são ideais.
+
+Em resumo, a Arquitetura Hexagonal promove sistemas robustos, flexíveis e testáveis, ao isolar o núcleo da aplicação de detalhes externos. Sua aplicação deve ser avaliada considerando complexidade, integrações externas e requisitos de manutenção, garantindo que os benefícios do padrão superem a sobrecarga inicial de implementação.
